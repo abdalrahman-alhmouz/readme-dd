@@ -1,57 +1,74 @@
-prompt("what is your name ?");
+
 var name = prompt("what is your name ?");
-alert(name);
+
 alert("hello" + name);
+
+function trueAnswer(){
+    alert("that true");
+}
+function falseAnswer(){
+    alert("that false");
+}
 
 var userInput = prompt("what is my name (abdalrahman or ahmad)?").toLowerCase(userInput);
 switch (userInput) {
     case 'abdalrahman':
-        alert("that true");
+        trueAnswer();
         break;
     case 'ahmad':
-        alert('that false');
+        falseAnswer();
         break;
 
 }
 var userInput2 = prompt("what is my hoppy (sport or drawing)?").toLowerCase(userInput2);
 switch (userInput2) {
     case 'sport':
-        alert("that true");
+        trueAnswer();
         break;
     case 'drawing':
-        alert('that false');
+        falseAnswer();
         break;
+
+}
+
+function teamQ(){
+    if (myTeam === "yes") {
+        trueAnswer();
+    }
+    // console.log("true");
+    else {
+        falseAnswer();
+        //console.log("false");
+    }
+    console.log('myTeam');
 
 }
 var myTeam = prompt("Is my hair black?(yes or no )").toLowerCase(myTeam);
-if (myTeam === "yes") {
-    alert('true');
-}
-// console.log("true");
-else {
-    alert('false');
-    //console.log("false");
-}
-console.log('myTeam');
+teamQ();
 
+function skinQ(){
+    if (myskin === "yes") {
+        falseAnswer();
+    }
+    // console.log("false");
+    else {
+        trueAnswer();
+        //console.log("true");
+    }
+    console.log('myskin');
+
+}
 var myskin = prompt("Is my skin black?(yes or no )").toLowerCase(myskin);
-if (myskin === "yes") {
-    alert('false');
-}
-// console.log("false");
-else {
-    alert('true');
-    //console.log("true");
-}
-console.log('myskin');
+skinQ();
+
 
 var mylength = prompt("Is my length 174?(yes or no )").toLowerCase(mylength);
 if (mylength === "yes") {
-    alert('true');
+    trueAnswer();
 }
 // console.log("true");
 else {
-    alert('false');
+    falseAnswer();
     //console.log("false");
 }
 var limit = 4;
@@ -84,7 +101,7 @@ while (guess !== 3) {
     guess = 3;
 }
 
-alert("that's true")
+trueAnswer();
 //console.log("true")
 var limit1 = 6;
 var array =['red','blue','black','green','yallo','orang','white']
